@@ -3,6 +3,7 @@ import GameBoard from './components/GameBoard';
 import WordToGuess from './components/WordToGuess';
 import GameStatus from './components/GameStatus';
 import HangmanDrawing from './components/HangmanDrawing';
+import Help from './components/Help';
 import './App.css';
 
 class App extends Component {
@@ -68,10 +69,18 @@ class App extends Component {
     this.selectRandomWord();
   };
 
+  toggleHelp = () => {
+    this.setState((prevState) => ({
+      showHelp: !prevState.showHelp,
+    }));
+  }
+
   render() {
     return (
       <div className="app">
         <h1>To the gallows</h1>
+        <button onClick={this.toggleHelp}>Help</button>
+        {this.state.showHelp && <Help />} 
         <HangmanDrawing incorrectGuesses={this.state.incorrectGuesses} maxIncorrectGuesses={this.maxIncorrectGuesses} />
         <WordToGuess wordToGuess={this.state.wordToGuess} guessedLetters={this.state.guessedLetters} />
         <GameBoard
