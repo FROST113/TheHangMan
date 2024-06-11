@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.app {
+  background-color: #fff;
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #333;
+}
+
+.game-status {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.game-status p {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 4px;
+}
+
+button.letter-button.guessed {
+  color: black;
+  background-color: darkgray;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+span.word-letter {
+  font-size: xxx-large;
+  margin: 5px;
+}
